@@ -74,7 +74,7 @@ jobs:
       -
         name: Docker meta
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: ${{ env.DOCKER_REGISTRY_IMAGE }}        
       - name: Set up QEMU
@@ -172,7 +172,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: ${{ env.DOCKER_REGISTRY_IMAGE }}
           flavor: |
