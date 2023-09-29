@@ -120,6 +120,11 @@ jobs:
     permissions:
       packages: write
       contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - s3proxy-2.1.0      
     steps:
       - name: Download digests
         uses: actions/download-artifact@v3
