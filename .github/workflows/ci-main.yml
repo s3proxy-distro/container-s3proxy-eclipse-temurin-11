@@ -3,7 +3,7 @@ name: Main CI
 #
 on:
   push:
-    branches:
+    branches:      
       - "next"
       - "next-major"
   pull_request:
@@ -177,13 +177,11 @@ jobs:
           images: ${{ env.DOCKER_REGISTRY_IMAGE }}
           flavor: |
             latest=false
-            suffix=_${{ matrix.version }}
+            prefix=${{ matrix.version }}_
           tags: |
             type=sha,format=long
             type=sha
             type=semver,pattern={{version}},value=${{ needs.release.outputs.version }}
-            type=semver,pattern={{major}},value=${{ needs.release.outputs.version }}
-            type=semver,pattern={{major}}.{{minor}},value=${{ needs.release.outputs.version }}
             type=ref,event=branch
             type=ref,event=pr
             type=ref,event=tag
