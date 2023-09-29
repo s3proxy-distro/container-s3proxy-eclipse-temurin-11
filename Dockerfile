@@ -5,7 +5,7 @@ WORKDIR /work
 
 COPY source/ /work
 
-RUN ls ;mvn package verify -DskipTests
+RUN mvn package verify -DskipTests
 
 FROM eclipse-temurin:11.0.20.1_1-jdk-ubi9-minimal
 ARG USER_NAME=s3proxy
