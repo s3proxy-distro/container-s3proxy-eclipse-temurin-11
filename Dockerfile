@@ -53,7 +53,7 @@ ENV \
     JCLOUDS_KEYSTONE_PROJECT_DOMAIN_NAME="" \
     JCLOUDS_FILESYSTEM_BASEDIR="/data"
 
-# USER ${USER_NAME}
+USER ${USER_NAME}
 
 EXPOSE 80 443
 #checkov:skip=CKV_DOCKER_2: Health check is external 
