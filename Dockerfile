@@ -7,7 +7,7 @@ COPY source/ /work
 
 RUN mvn package verify -DskipTests
 
-FROM eclipse-temurin:11.0.21_9-jdk-ubi9-minimal
+FROM eclipse-temurin:11.0.22_7-jdk-ubi9-minimal
 ARG USER_NAME=s3proxy
 ARG USER_ID=10001
 ARG GROUP_NAME=s3proxy
