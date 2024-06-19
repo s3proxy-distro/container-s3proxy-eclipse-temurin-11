@@ -65,7 +65,7 @@ jobs:
           - linux/amd64
           - linux/arm64
         version:
-          - v2.2.0
+          - s3proxy-2.2.0
           # - s3proxy-2.0.0
 
     steps:
