@@ -161,7 +161,7 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - v2.1.1
+          - s3proxy-2.2.0
           # - s3proxy-2.0.0
     steps:
       - name: Download digests
