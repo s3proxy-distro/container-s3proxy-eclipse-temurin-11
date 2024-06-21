@@ -91,7 +91,7 @@ jobs:
         with:
           # Repository name with owner. For example, actions/checkout
           # Default: ${{ github.repository }}
-          repository: 'gual/s3proxy'
+          repository: 'gaul/s3proxy'
           path: source
           ref: ${{ matrix.version }}
       - name: Build and push by digest
